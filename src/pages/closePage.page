@@ -1,0 +1,6 @@
+<apex:page >
+   <script>
+     alert('Hi');
+     window.close();
+   </script>
+ </apex:page>

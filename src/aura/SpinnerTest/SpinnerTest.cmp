@@ -1,0 +1,19 @@
+<!--
+ - Created by Ankit on 3/24/18.
+ -->
+
+<aura:component description="SpinnerTest" controller="AccountsControllerList">
+    <lightning:button variant="brand" label="Toggle" onclick="{!c.callFunction}"/>
+    <aura:attribute name="accounts" type="List" />
+    <aura:attribute name="gotIt" type="string"/>
+    {!v.gotIt}
+    <div aura:id = "sps" class="slds-hide">
+        Here is the spinner block
+        <!--<lightning:spinner variant="brand" size = "large" aura:id = "sps" class="slds-hide"/>-->
+    </div>
+
+    <div aura:id = "sps1" id = "sps1" class="slds-hide">
+        Here is the spinner block Javascript
+        <!--<lightning:spinner variant="brand" size = "large" aura:id = "sps" class="slds-hide"/>-->
+    </div>
+</aura:component>

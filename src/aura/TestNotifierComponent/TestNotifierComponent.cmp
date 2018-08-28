@@ -1,0 +1,9 @@
+<aura:component >
+    <aura:registerEvent name="regtestEvent" type="c:TestCompEvent"/>
+    <aura:attribute name="NotifierName" type="string"/>
+    <div>
+       <h1>This is NotifierName {!v.NotifierName} Instance</h1>
+        <ui:button label="click here to fire the a component event" 
+                   press="{!c.fireCompEvent}"/>
+    </div>                                               
+</aura:component>

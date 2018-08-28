@@ -1,0 +1,32 @@
+<!--
+ - Created by Ankit on 2/23/18.
+ -->
+
+<aura:component description="progressRing">
+    <aura:attribute name="value" type="integer" default="80"/>
+    <aura:attribute name="variant" type="string" default="warning"></aura:attribute>
+
+    <aura:attribute name="hasVariant" type="Boolean" access="private" default="{!false}"/>
+    <aura:attribute name="ringClass" type="string" access="private"/>
+    <aura:attribute name="iconName" type="string" access="private"/>
+    <aura:attribute name="altText" type="string" access="private"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.updateView}"/>
+    <aura:handler name="change" value="{!v.value}" action="{!c.updateView}"/>
+    <aura:handler name="change" value="{!v.variant}" action="{!c.updateView}"/>
+
+    <div class="{!v.ringClass}">
+        <div id="progressContainer" class="slds-progress-ring__progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{!v.value}">
+
+        </div>
+
+        <div class="slds-progress-ring__content">
+            <aura:if isTrue="{!v.hasVariant}">
+                <lightning:icon iconName="{!v.iconName}" size="large" title="{!v.altText}" alternativeText="{!v.altText}"/>
+            </aura:if>
+        </div>
+    </div>
+
+
+
+</aura:component>

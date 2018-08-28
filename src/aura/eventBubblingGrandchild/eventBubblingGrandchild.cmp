@@ -1,0 +1,10 @@
+<!--
+ - Created by Ankit on 8/28/17.
+ -->
+
+<aura:component description="eventBubblingGrandchild">
+    <!-- <aura:handler name="bubblingEvent" event="c:CompEvent" action="{!c.handleBubbling}"/> -->
+     <div class="grandchild">
+         <c:eventBubblingEmitter />
+     </div>
+</aura:component>

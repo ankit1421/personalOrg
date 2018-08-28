@@ -1,0 +1,16 @@
+<apex:page controller="ChartController2" showHeader="false" sidebar="false">
+ <apex:chart height="480" width="640" data="{!data}">
+    <apex:axis type="Category" position="bottom" fields="closed" 
+               title="Month of the Year" grid="true">
+               <apex:chartLabel rotate="315"/>
+    </apex:axis>
+    <apex:axis type="Numeric" position="left" fields="stage" 
+               title="Stage - Closed Won"/>
+    <apex:lineSeries axis="left" xField="closed" yField="stage" 
+         markerType="circle" markerSize="0" markerFill="#8E35EF" />
+    <apex:scatterSeries axis="left" xField="closed" yField="gold" 
+         markerType="circle" markerSize="4" markerFill="#FFD700"/>
+    <apex:scatterSeries axis="left" xField="closed" yField="silver"
+         markerType="circle" markerSize="4" markerFill="#c0c0c0" />
+</apex:chart> 
+</apex:page>

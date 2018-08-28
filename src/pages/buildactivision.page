@@ -1,0 +1,179 @@
+<apex:page showHeader="false" sidebar="false">
+ 
+  <apex:stylesheet value="{!URLFOR($Resource.activision_resource, 'css/atviSupport.css')}"/>
+  <apex:stylesheet value="{!URLFOR($Resource.activision_resource, 'css/colorbox.css')}"/>
+  <apex:stylesheet value="{!URLFOR($Resource.activision_resource, 'css/helpers.css')}"/>
+  <apex:stylesheet value="{!URLFOR($Resource.activision_resource, 'css/jquery.jscrollpane.css')}"/>
+  <apex:stylesheet value="{!URLFOR($Resource.activision_resource, 'css/popup-support.css')}"/>
+  
+   <apex:includeScript value="{!URLFOR($Resource.activision_resource, 'js/jquery-1.5.2.min.js')}" />
+   <apex:includeScript value="{!URLFOR($Resource.activision_resource, 'js/atviSupport.js')}" />
+   <apex:includeScript value="{!URLFOR($Resource.activision_resource, 'js/jquery.colorbox.js')}" />
+   <apex:includeScript value="{!URLFOR($Resource.activision_resource, 'js/jquery.infieldlabel.min.js')}" />
+   <apex:includeScript value="{!URLFOR($Resource.activision_resource, 'js/jquery.validate.min.js')}" />
+  <head>
+       <title>
+           Activision.com Customer Support
+       </title>
+   </head>
+   <body class = "liveSupport">
+    <div class="radialGradient">  
+      <div class="topLineHeader clearfix">
+        <div class="pageWrapper">
+          <div class="countryDropdown">
+            <div class="countries">
+              <a href="#" class="current"><img src="{!URLFOR($Resource.activision_resource, 'img/US_flag.png')}" alt="US flag" width="22" height="15" /></a>
+              <div class="dropDown" style="display: none;">
+                <a href="#"><img src="{!URLFOR($Resource.activision_resource,'img/UnitedKingdom_flag.png')}" alt="UK flag" width="22" height="15" /></a>
+                <a href="#"><img src="{!URLFOR($Resource.activision_resource,'img/Germany_flag.png')}" alt="German flag" width="22" height="15" /></a>
+                <a href="#"><img src="{!URLFOR($Resource.activision_resource,'img/France_flag.png')}" alt="France flag" width="22" height="15" /></a>
+                <a href="#"><img src="{!URLFOR($Resource.activision_resource,'img/Italy_flag.png')}" alt="Italy flag" width="22" height="15" /></a>
+                <a href="#"><img src="{!URLFOR($Resource.activision_resource,'img/Spain_flag.png')}" alt="Spain flag" width="22" height="15" /></a>
+                <a href="#"><img src="{!URLFOR($Resource.activision_resource,'img/Australia_flag.png')}" alt="Australia flag" width="22" height="15" /></a>
+                <a href="#"><img src="{!URLFOR($Resource.activision_resource,'img/Netherlands_flag.png')}" alt="Netherlands flag" width="22" height="15" /></a>
+                <a href="#"><img src="{!URLFOR($Resource.activision_resource,'img/Belgium_flag.png')}" alt="Belgium flag" width="22" height="15" /></a>
+                <a href="#"><img src="{!URLFOR($Resource.activision_resource,'img/Norway_flag.png')}" alt="Norway flag" width="22" height="15" /></a>
+                <a href="#"><img src="{!URLFOR($Resource.activision_resource,'img/Finland_flag.png')}" alt="Finland flag" width="22" height="15" /></a>
+                <a href="#"><img src="{!URLFOR($Resource.activision_resource,'img/Luxembourg_flag.png')}" alt="Luxembourg flag" width="22" height="15" /></a>
+                <a href="#"><img src="{!URLFOR($Resource.activision_resource,'img/Sweden_flag.png')}" alt="Sweden flag" width="22" height="15" /></a>
+              </div>
+            </div> <!-- /.countries -->
+          </div>
+          <div class="currentLang clearfix">
+            English
+          </div>
+          <ul class="userLogin clearfix">
+            <li>
+              <a href="#">My Account</a>|
+            </li>
+            <li>
+              <a href="#">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="pageWrapper">
+        <!-- start global header -->
+        <div id="globalHeader">
+          <div class="iconCenter">
+            <img src="{!URLFOR($Resource.activision_resource, 'img/activisionLogoGray.png')}" width="247" height="61" alt="Activision" /><span>SUPPORT</span>
+          </div>
+          <div class="mainNavigation">
+            <ul class="clearfix">
+              <li class="first"><a href="#" class="first">SUPPORT HOME</a></li>
+              <li><a href="#">KNOWLEDGE BASE</a></li>
+              <li><a href="#" class="selected">MY SUPPORT</a></li>
+              <li class="last"><a href="#">WARRANTY &amp; RETURNS</a></li>              
+            </ul>
+          </div>
+        </div>
+        <!-- end global header -->
+        <div class="pageContent clearfix left-sidebar">
+          <!-- start left column -->
+          <div class="left">
+            <div class="top"></div>
+            <div class="support-menu">
+              
+              <ul>
+               <h2>WELCOME TOM,</h2>
+                <li class="first"><a href="#">My Games</a></li>
+                <li><a href="#">My Cases</a></li>
+                <li><a href="#">My Returns</a></li>
+                <li class="last selected"><a href="#">My Profile</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- end left column -->
+          <!-- start right column -->
+          <div class="right" style="height: auto;">
+            <h1>MY PROFILE</h1>
+            <p class="return-text">Update your profile information here.</p>
+            <form action="#" method="post" class="form-profile">
+              <div class="wrap-field clearfix border-top">
+                <label for="fname">First Name</label>
+                <input name="fname" id="fname" type="text" class="inputText" />
+              </div>
+              <div class="wrap-field clearfix">
+                <label for="lname">Last Name</label>
+                <input name="lname" id="lname" type="text" class="inputText" />
+              </div>
+              <div class="wrap-field clearfix">
+                <label for="email">Email Address</label>
+                <input name="email" id="email" type="text" class="inputText" />
+              </div>
+              <h3 class="border-top">Change Password</h3>
+              <div class="wrap-field clearfix">
+                <label for="password">Password</label>
+                <input name="password" id="password" type="text" class="inputText" />
+              </div>
+              <div class="wrap-field clearfix">
+                <label for="newPassword">New Password</label>
+                <input name="newPassword" id="newPassword" type="text" class="inputText" />
+                <label class="error">Password must be at least 6 characters</label>
+              </div>
+              <div class="wrap-field clearfix">
+                <label for="rePassword">Verify Password</label>
+                <input name="rePassword" id="rePassword" type="text" class="inputText" />
+              </div>
+              <div class="wrap-buttons border-top">
+                <a href="javascript:void(0);" class="button btnSaveChanges" onclick="javascript:document.forms[0].submit(); return false;">Save Changes</a>
+              </div>
+            </form>
+          </div>
+          <!-- end right column -->
+        </div>
+        <!-- start global footer -->
+        <div id="globalFooter">
+          <div class="footerContainer">
+            <ul>
+              <li>
+                <a id="menubtm1" target="new" href="http://www.activisionblizzard.com/corp/b/aboutUs/ourCompany.html">ABOUT US</a>
+              </li>
+              <li>
+                <a id="menubtm2" href="http://www.activision.com/atvihub/careers/main.do?site=en_US">CAREERS</a>
+              </li>
+              <li>
+                <a id="menubtm3" href="http://www.activision.com/atvihub/presscenter/main.do?site=en_US">PRESS CENTER</a>
+              </li>
+              <li>
+                <a id="menubtm4" href="http://www.activision.com/atvihub/about.do?site=en_US&amp;sub=corporate">CORPORATE CITIZENSHIP</a>
+              </li>
+              <li>
+                <a id="menubtm5" href="http://investor.activision.com/">INVESTOR RELATIONS</a>
+              </li>
+              <li>
+                <a id="menubtm6" href="http://investor.activision.com/releases.cfm">NEWS</a>
+              </li>
+              <li>
+                <a id="menubtm7" href="http://www.activision.com/atvihub/rss.do?site=en_US">RSS FEED</a>
+              </li>
+              <li class="last">
+                <a id="menubtm8" href="http://www.activision.com/atvihub/contactus.do?site=en_US">CONTACT US</a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a id="legal_logo1" href="legal.do">LEGAL</a>
+              </li>
+              <li>
+                <a id="legal_logo2" href="termsandconditions.do?sub=terms">TERMS OF USE</a>
+              </li>
+              <li>
+                <a id="legal_logo3" href="privacy.do?sub=privacy">PRIVACY POLICY</a>
+              </li>
+              <li class="last">
+                <a id="legal_logo5" href="http://www.esrb.org/">ESRB.org</a>
+              </li>
+            </ul>
+            <div class="footerIcons">
+              <a href="http://www.bbbonline.org"><img alt="BBBOnline" src="http://www.activision.com/ROOT/media/ratings/ESRB/footer_bbb_btn_logo.gif" /></a>
+              <a href="http://www.activision.com/atvihub/privacy.do?sub=privacy"><img alt="ESRB" src="http://www.activision.com/ROOT/media/ratings/ESRB/privacy_certified-2008-117x44.gif" /></a>
+              <a href="http://www.esrb.org"><img alt="EM" src="http://www.activision.com/ROOT/media/ratings/ESRB/footer_esrb_btn_logo.jpg" /></a>
+            </div>
+          </div>
+        </div>
+        <!-- end global footer -->
+      </div>
+    </div>
+   </body>
+</apex:page>

@@ -1,0 +1,42 @@
+<apex:page standardController="Account"  tabStyle="Account" >
+
+<script type="text/javascript">
+function confirmCancel()
+{
+   //alert(document.getElementById('idDiv'));
+   //document.getElementById('idDiv').innerText = "{!account.Active__c}";
+
+   var select = "{!account.Active__c}";
+  
+   if(select=="Yes")
+   {
+   alert('This account is active!!!');
+   }
+   else if(select=="No")
+   {
+   alert('This account is deactive!!!!!');
+   }
+   else
+   alert('None!!!');
+}
+
+window.onload = new function() { confirmCancel(); }
+
+</script>
+
+<div id ="idDiv"> </div>
+
+<apex:sectionHeader title=" Page Information" />
+<apex:form id="ch2">
+
+
+<apex:pageBlock title="Hello {!$User.FirstName}!">
+You are viewing the {!account.name} account. <p/>
+
+<apex:commandButton value="Test JavaScript Method" onclick="confirmCancel();" rerender="ch2"/>
+
+
+</apex:pageBlock>
+ 
+</apex:form>
+</apex:page>

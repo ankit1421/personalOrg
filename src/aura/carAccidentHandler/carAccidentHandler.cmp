@@ -1,0 +1,8 @@
+<aura:component >
+	  <aura:handler name="readyToHandleAccident" event="c:carAccident" action="{!c.plshandleEvent}" ></aura:handler>
+      <aura:attribute name="messagefromchild" type="string" access="public"></aura:attribute>
+      <c:carAccidentNotifier />
+      <h1>
+           Here is the message : {!v.messagefromchild}
+      </h1>
+</aura:component>

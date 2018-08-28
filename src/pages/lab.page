@@ -1,0 +1,8 @@
+<apex:page Controller="LabController">
+   <apex:form >
+        <div class ="required">
+        <apex:inputText value="{!strValue}" required="true"/>
+        </div>
+        <apex:commandButton value="Submit" action="Submit"/>
+   </apex:form>
+</apex:page>

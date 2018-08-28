@@ -1,0 +1,12 @@
+<aura:component >
+    <aura:attribute name="handlerName" type="string"/>
+    <aura:attribute name="mostRecentEvent" type="String" default="Most recent event handled:"/>
+    <aura:handler name="regtestEvent" 
+                  event="c:TestCompEvent" 
+                  action="{!c.handleComponentEventFired}"/>
+    <c:TestNotifierComponent NotifierName="MineVariable"/>
+     <div>
+         <h3>This is handler name {!v.handlerName}</h3>
+         <p>{!v.mostRecentEvent}</p>
+     </div>
+</aura:component>

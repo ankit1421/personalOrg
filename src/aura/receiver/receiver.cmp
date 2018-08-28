@@ -1,0 +1,5 @@
+<aura:component >
+    <aura:attribute name="reciverText" type="string" default="None"/>
+     <aura:handler event="c:Message" action="{!c.answer}"/>
+      Reciever Message : {!v.reciverText}
+</aura:component>

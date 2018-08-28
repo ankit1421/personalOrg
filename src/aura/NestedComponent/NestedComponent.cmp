@@ -1,0 +1,6 @@
+<aura:component >
+    <aura:attribute name="Passedthrough" type="string" default="PassedAttribute" />
+    <c:HelloWorld whom="{!v.Passedthrough}" />
+    <c:HelloWorld whom="Ankit Khandelwal"/>
+    <c:HelloWorld ></c:HelloWorld>
+ </aura:component>

@@ -1,0 +1,9 @@
+.THIS.listTile {
+    position: relative;
+    overflow: visible;
+    height: auto;
+    margin: 0px 16px;
+    padding: 0px;
+    transform: translate3d(0px, 0px, 0px);
+    box-sizing: border-box;
+}

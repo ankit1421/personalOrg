@@ -1,0 +1,49 @@
+<apex:page standardStylesheets="false" showHeader="false" sidebar="false">
+<apex:includeScript value="{!URLFOR($Resource.Jquery_Vertical_Menu, '/js/jquery-1.8.0.min.js')}"  />
+<apex:includeScript value="{!URLFOR($Resource.Jquery_Vertical_Menu, '/js/jquery-ui-1.8.23.custom.min.js')}"  />
+<apex:stylesheet value="{!URLFOR($Resource.Jquery_Vertical_Menu,'/css/overcast/jquery-ui-1.8.23.custom.css')}"/>
+
+<script>
+    $(function() {
+        $( "#accordion" ).accordion({
+            event: "mouseover"
+        });
+     
+      $( "#in" ).accordion({
+            event: "mouseover"
+        });
+    
+    });
+    </script>
+
+
+
+<div class="demo">
+
+<div id="accordion" style  = "width:240px;height:400px;">
+   <h3><a href="#">General Value Story</a></h3>
+    <div>
+        <p> Demo !</p>
+    </div>
+    <h3><a href="#"> Industry Information</a></h3>
+    <div>
+        <p> Demo !! </p>
+    </div>
+    <h3><a href="#"> Marketing </a></h3>
+    <div>
+        <p>Demo !!!</p>
+        <ul>
+            <li>List item one</li>
+               
+            <li>List item two</li>
+            <li>List item three</li>
+        </ul>
+    </div>
+    <h3><a href="#">Netwrok Products and Solutions</a></h3>
+    <div>
+        <p> Demo !!! </p>
+    </div>
+</div>
+
+</div>
+</apex:page>

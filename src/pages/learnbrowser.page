@@ -1,0 +1,11 @@
+<apex:page id="pageForm" controller="formController">
+  <apex:form id="form">
+    <apex:inputText id="textFld" value="{!myObject.textData}" />
+    <apex:inputhidden id="otherName" value="{!myObject.hiddenField}" />
+    <apex:commandButton value="Submit Data" id="btnCopy" rerender="newData" />
+  </apex:form>
+  <apex:outputPanel id="newData">
+    Posted value: {!myObject.textData}<br/>
+    Action Result: {!myObject.website}
+  </apex:outputPanel>
+</apex:page>

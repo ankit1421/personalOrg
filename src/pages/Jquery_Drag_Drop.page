@@ -1,0 +1,14 @@
+<apex:page Controller="Jquery_Drag_Drop">
+<apex:includeScript value="{!URLFOR($Resource.Jquery_UI_10, '/jquery-ui-1.10.1.custom/js/jquery-1.9.1.js')}"  />
+<apex:includeScript value="{!URLFOR($Resource.Jquery_UI_10, '/jquery-ui-1.10.1.custom/js/jquery-ui-1.10.1.custom.js')}" />
+ <style>
+  
+  </style>
+  <script>
+ 
+  </script>
+<apex:form >
+   <apex:inputfield value="{!jquery.Jquery_Text_Area__c}"/>
+   <apex:inputfield value="{!jquery.Jquery_Text_Area_2__c}"/>
+</apex:form>
+</apex:page>

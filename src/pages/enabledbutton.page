@@ -1,0 +1,26 @@
+<apex:page controller="enablebutton">
+  
+<script type="text/javascript"> 
+function getSelected(){
+
+         var myradios = document.getElementsByName('{!$Component.form1.items}'); 
+        (document.getElementById('{!$Component.form1.ok}')).disabled =true; 
+         for(i = 0; i < myradios.length; i++)      
+         if(myradios[i].checked)
+             {         // now we now the selected index        
+                      alert('Selected value is: ' + myradios[i].value);         
+                      (document.getElementById('{!$Component.form1.ok}')).disabled =false;     
+             }
+        
+        } 
+</script>
+
+ <apex:form id="form1">
+<apex:selectRadio id="items" value="{!dealerAccount}" layout="pageDirection" onclick="{!RadioStatus}" rendered="{!items<>null}" onchange="getSelected()">                         <apex:selectOptions value="{!items}" />                                
+   <apex:selectOptions value="{!items}" />   
+ </apex:selectRadio>                       
+  <apex:outputPanel rendered="{!AND(IF(RadioStatus != null , true , false),IF(RadioStatus == 'no', true , false))}" >            
+   <apex:commandButton value="OK" action="{!test}" rerender="out" status="status_search" id="ok"  />            
+   </apex:outputPanel>
+    </apex:form>
+ </apex:page>

@@ -1,0 +1,13 @@
+<aura:component controller="OuterComponentClass">
+ <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+   
+   <aura:attribute name="myFavouriteAccount" type="Account"></aura:attribute>
+   <aura:attribute name="myFavouriteInstance" type="SampleReturnClass"></aura:attribute>
+   <aura:attribute name="jsObject" type="Object"></aura:attribute>
+
+ <c:InnerComponent1 header="hello" numbers="[1,2,3,4,5]" numbers2="[10,9,8,7]"
+                      ratingsByProduct="{Z:3,Y:7}"
+                      myFavouriteAccount="{!v.myFavouriteAccount}"
+                      myFavouriteInstance="{!v.myFavouriteInstance}"
+                      jsObject="{!v.jsObject}" />
+</aura:component>

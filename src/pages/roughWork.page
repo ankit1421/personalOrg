@@ -1,0 +1,6 @@
+<apex:page Controller="RoughController">
+  <script type = "text/javascript"> 
+      window.setTimeout(function(){window.reload();},100);     
+  </script>
+ {!sURL}
+</apex:page>

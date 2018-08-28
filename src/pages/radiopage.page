@@ -1,0 +1,19 @@
+<apex:page >
+<apex:form >
+<script language="javascript">
+function changeImg(){
+alert("Hello");
+//document.ankit.value={!$Resource.question};
+return true;
+}
+function changeImg2(){
+document.ankit.value={!$Resource.help};
+return true;
+}
+
+</script>
+Here is page to change the image . 
+<apex:image id="ankit" value="{!$Resource.help}" onclick="changeImg()" WIDTH="15" HEIGHT="15"  />
+
+</apex:form>
+</apex:page>

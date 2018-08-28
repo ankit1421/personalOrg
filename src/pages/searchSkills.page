@@ -1,0 +1,48 @@
+<apex:page controller="SearchSkillsClass" id="srcPage" cache="true">
+     <style>
+     
+     </style>
+     <apex:form id="srcForm">         
+       <apex:pageBlock title="Search Skills" id="srcPgBlk1"> 
+       <apex:outputPanel id="ErrPanel" >
+         <Center><font color="red" style="font-weight:bold"><apex:messages id="err"/></font></center>
+       </apex:outputPanel>
+        <apex:pageBlockSection title="Search Skills" columns="4" id="srcPgBlkSc">                
+                 <apex:pageBlockSectionItem dataStyle="width:200px">
+                    <apex:outputLabel value="Search String"/>
+                    <apex:inputText value="{!SearchString}" />
+                  </apex:pageBlockSectionItem>
+         </apex:pageBlockSection>
+          <apex:pageBlockButtons location="bottom">
+                <apex:commandButton value="Search" action="{!searchClick}" status="searching" rerender="Searchpanel,ErrPanel"/>
+          </apex:pageBlockButtons>
+            <apex:actionStatus id="searching" onstart="ViewImage()" onstop="HideImage()"/>
+        </apex:pageBlock> 
+               
+       <apex:outputPanel id="Searchpanel">        
+           <apex:pageBlock title="Search Results" id="searchResults" rendered="{!resultsTable}"> 
+               
+            <apex:actionStatus id="waitingStatus">                   
+                <apex:facet name="start">
+                    <div class="waitingSearchDiv waitingSearchDivOpacity" style="width:80%;top:300px;height:250px; display:block;position:absolute;left:240px;"></div>        
+                    <div id="00B80000007AEEH_loading" class="waitingSearchDiv" style="width: 100%; height: 100%; display: block;">
+                        <div class="waitingHolder" style="top: 400px; width: 110px;">
+                        
+                            <img class="waitingImage" src="/img/loading.gif"/>        
+                            <span class="waitingDescription">Processing...</span>
+                        </div>
+                    </div>
+                </apex:facet>
+                <apex:facet name="stop"></apex:facet>
+            </apex:actionStatus>
+            
+            <apex:pageblocktable value="{!Search_lst.lead_lst}" var="SRL">              
+            <apex:column value="{!SRL.Name}"/>
+            </apex:pageblocktable>
+            <apex:pageblocktable value="{!Search_lst.acc_lst}" var="SRA">              
+             <apex:column value="{!SRA.Name}" />
+            </apex:pageblocktable>                                        
+        </apex:pageBlock>
+    </apex:outputPanel>
+   </apex:form>
+</apex:page>

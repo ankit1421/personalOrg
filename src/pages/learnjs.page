@@ -1,0 +1,47 @@
+<apex:page standardController="Account">
+  
+      <apex:includeScript value="{!URLFOR($Resource.Jquery18, 'js/jquery-1.7.1.min.js')}"/>
+      <apex:includeScript value="{!URLFOR($Resource.Jquery18, 'js/jquery-ui-1.8.17.custom.min.js')}"/>
+      <apex:stylesheet value="{!URLFOR($Resource.Jquery18, 'css/ui-lightness/jquery-ui-1.8.17.custom.css')}"/>
+   
+    <!--
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+  -->
+     <script type="text/javascript">
+       var j$ = jQuery.noConflict();
+       
+       j$(document).ready(function() {
+         
+         j$("#showpop").click(function() {
+          j$("#dialog").dialog({height: 530,title:'Prefernce'});
+                    
+         });
+         
+        
+     
+     });
+    </script>
+<apex:outputPanel layout="block">
+          
+          <div style="text-align:left">
+              <ol>
+                <li><a href="#" id="MerchantDataPackLink" >Request Merchant Data Pack (Actual Start Date)</a></li>
+                <li><label style="color:#929292">Request Merchant LIF Listing (Actual Start Date)</label></li>
+                <li><a href="/apex/HeirarchyViewerPhaseII?Id={!Account.Id} " target="_blank">Request Internal Merchant Report</a></li>
+                <li><label style="color:#929292">Request Hierarchy Picture</label></li>
+                <li><label style="color:#929292">Attach Merchant LIF Listing (Merchant Response Date)</label></li>
+                <li><a href="#" id="datapack">Auto Merchant Maintenance (Merchant Response Date)</a></li>
+                <li><label style="color:#929292" id="maintByType">Manual Merchant Maintenance</label></li>
+                <li><label style="color:#929292">Review History</label></li>
+                <li><label style="color:#929292">Memo</label></li>
+                <li><font style="color:#929292"><a href = "#" id = "showpop">Preference</a></font></li>
+                <li><a href="/apex/HMT_Phase2_Training?Id={!Account.Id}">Training / Reference Guide</a></li>
+                
+                 
+          </ol>
+          </div>
+      </apex:outputPanel> 
+     <div id="dialog" title="Dialog Title">I'm in a dialog</div>
+     </apex:page>

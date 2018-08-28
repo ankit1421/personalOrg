@@ -1,0 +1,4 @@
+<aura:component >
+	<aura:registerEvent name="readyToHandleAccident" type="c:carAccident"/>
+    <lightning:button variant="brand" label="FireEvent" onclick="{!c.fireEvent}"/>
+</aura:component>

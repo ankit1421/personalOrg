@@ -1,0 +1,30 @@
+<aura:component implements="force:appHostable">
+    <aura:attribute name="item" type="Camping_Item__c" />
+    <table class="slds-table slds-table--bordered slds-table--cell-buffer">
+      <tbody>
+         <tr>
+          <td data-label="Item Name">
+            <div class="slds-truncate" title = "Name">
+                <ui:outputText value="{!v.item.Name}"/>
+            </div>
+          </td>
+          <td data-label="Packed">
+        	<div class="slds-truncate" title="Packed">
+                <ui:outputCheckbox value="{!v.item.Packed__c}" />
+            </div>
+          </td>
+          <td data-label="Packed">
+        	<div class="slds-truncate" title="Quantity">
+                <ui:outputNumber value="{!v.item.Quantity__c}"/>
+            </div>
+          </td>
+          <td data-label="Packed">
+        	<div class="slds-truncate" title="Price">
+                <ui:outputCurrency value="{!v.item.Price__c}"/>
+            </div>
+          </td>
+             
+        </tr>     
+      </tbody>  
+    </table>    
+</aura:component>

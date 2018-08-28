@@ -1,0 +1,8 @@
+<!--
+ - Created by Ankit on 8/28/17.
+ -->
+
+<aura:component description="eventBubblingEmitter">
+    <!--<aura:registerEvent type="c:CompEvent" name="bubblingEvent"/>-->
+     <lightning:button label="startBubbling" onclick="{!c.fireEvent}"/>
+</aura:component>

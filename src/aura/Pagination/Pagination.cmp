@@ -1,0 +1,24 @@
+<aura:component >
+    <aura:attribute name="currentPageNumebr" type="integer" required="true"></aura:attribute>
+    <aura:attribute name="maxPageNumber" type="integer" required="true"></aura:attribute>
+    <div class = "slds-button-group" role = "group">
+        <button onClick = "{!c.firstPage}" class = "slds-button slds-button-neutral" >
+            first
+        </button>
+        <button onClick = "{!c.prevPage}" class = "slds-button slds-button-neutral" >
+            last
+        </button>
+
+         <button class="slds-button slds-button--neutral">
+            {!v.currentPageNumber} / {!v.maxPageNumber}
+         </button>
+
+         <button onClick = "{!c.nextPage}" class = "slds-button slds-button--neutral">
+             Next
+         </button>
+
+          <button onClick = "{!c.lastPage}" class = "slds-button slds-button--neutral">
+             Last
+         </button>
+    </div>
+</aura:component>

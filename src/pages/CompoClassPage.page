@@ -1,0 +1,5 @@
+<apex:page >
+<apex:form >
+  <c:Component_class myvalue="picklistdisp" sObjectType="Account"></c:Component_class>
+</apex:form>
+</apex:page>

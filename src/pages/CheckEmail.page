@@ -1,0 +1,15 @@
+<apex:page controller="SendEmailASA">
+<apex:pageBlock title="Send an Email with attachment">
+        <p>You are sending mail to Ankit Khandelwal</p>
+        <br />
+        <apex:form >
+        <br /><br />
+            <apex:outputLabel value="Subject" for="Subject"/>:<br />     
+            <apex:inputText value="{!subject}" id="Subject" maxlength="80"/>
+            <br /><br />
+             There will be a HTML Body and a Attachment         
+            <br /><br /><br />
+            <apex:commandButton value="Go" action="{!Sendmailtoasa}" /> 
+        </apex:form>
+    </apex:pageBlock>
+</apex:page>

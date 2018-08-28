@@ -1,0 +1,50 @@
+<apex:page Controller="AccountController1" extensions="ContactController">
+
+<style type="text/css">
+    .sample {
+            font-weight:bold;
+    }
+</style>
+
+    <apex:form >
+            
+        <apex:pageBlock title="Helloooo {!$User.FirstName}!" mode="Edit">
+            
+            <apex:pageBlockSection title="Account Section" columns="2">
+                <apex:outputLabel value="Account Name: " styleClass="sample"/>
+                <apex:outputText value="{!accountObj.name}"/>
+                
+                <apex:outputLabel value="Account Number: " styleClass="sample"/>
+                <apex:outputText value="{!accountObj.id}"/>
+                
+                <apex:outputLabel value="Industry: " styleClass="sample"/>
+                <apex:outputText value="{!accountObj.industry}"/>
+                
+                <apex:outputLabel value="Billing Street: " styleClass="sample"/>    
+                <apex:outputText value="{!accountObj.billingstreet}"/>              
+            </apex:pageBlockSection>    
+
+            <apex:pageBlockSection title="Contact Section" >            
+                <apex:pageBlockTable value="{!contacts}" var="contact">             
+                    <apex:column value="{!contact.Name}"/>              
+                    <apex:column value="{!contact.Phone}"/>                                 
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection title="Contact Section" columns="2">         
+                <apex:dataTable value="{!contacts}" var="contact" cellPadding="4" border="1">               
+                    <apex:column ><apex:facet name="header">Name</apex:facet>{!contact.Name}</apex:column>              
+                    <apex:column ><apex:facet name="header">Phone</apex:facet>{!contact.Phone}</apex:column>                                    
+                </apex:dataTable>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection title="Oppertunity Section" >            
+                <apex:outputLink value="javascript:window.open('/apex/OpportunityViewPage?Id={!accountObj.id}')">Opportunities</apex:outputLink>                                
+            </apex:pageBlockSection>
+                
+
+                
+        </apex:pageBlock>
+            
+    </apex:form>    
+</apex:page>

@@ -1,0 +1,7 @@
+<!--
+ - Created by Ankit on 3/23/18.
+ -->
+
+<aura:event type="COMPONENT" description="accordionClicked">
+
+</aura:event>

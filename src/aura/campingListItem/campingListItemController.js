@@ -1,0 +1,11 @@
+({
+	packItem : function(component, event, helper) {
+         var a = component.get("v.item");
+         console.log(a);
+         a.packed__c = true;
+         component.set("v.item",a);
+        
+         var btnClicked = event.getSource();
+         btnClicked.set("v.disabled",true);
+	}
+})

@@ -1,0 +1,22 @@
+<apex:page controller="jq">
+  <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" />
+  <script>
+      $j = jQuery.noConflict();
+
+      $j(document).ready(function($) {
+       alert('hi');
+      $j('[id$=datepickerFrom]').datepicker("hide")
+      $j('[id$=datepickerTo]').datepicker("hide")
+     
+      $j('[id$=datepickerFrom]').datepicker({dateFormat: 'mm-dd-yyy'})
+      $j('[id$=datepickerTo]').datepicker({dateFormat: 'mm-dd-yyy'})
+     
+       });
+    </script>
+    <apex:form >
+        <apex:pageBlock >
+            From Date:  <input value="{!fromDate}" id="datepickerFrom"  type="text" />   
+            To Date: <input value="{!toDate}" id="datepickerTo" type="text" /> 
+        </apex:pageBlock>
+  </apex:form>
+</apex:page>

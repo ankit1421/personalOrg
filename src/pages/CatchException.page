@@ -1,0 +1,6 @@
+<apex:page controller="CustomExp" >
+  <apex:form >
+       <apex:pageMessages />
+       <apex:commandButton value="Start" action="{!insertAccount}"/>
+  </apex:form>
+</apex:page>

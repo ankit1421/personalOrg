@@ -1,0 +1,14 @@
+<apex:page StandardController="Lead" extensions="ClassBeforeLead">
+  <apex:form >
+    <apex:pageBlock >
+     <apex:pageBlockSection >
+        <apex:inputField value="{!temp_lead.FirstName}"/>
+         <apex:inputField value="{!temp_lead.LastName}"/>
+        <apex:inputField value="{!temp_lead.Phone}"/>
+    </apex:pageBlockSection>
+     <apex:pageBlockButtons >
+       <apex:commandButton value="Next" action="{!URLFOR($Action.Lead.New,Null,["Title" ="GETONE","Save" = 1],true)}"/>
+     </apex:pageBlockButtons>   
+   </apex:pageBlock>
+  </apex:form>
+</apex:page>

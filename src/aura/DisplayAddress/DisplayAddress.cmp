@@ -1,0 +1,7 @@
+<aura:component >
+    <aura:attribute name="Street" type="string" default="Misson Street" />
+    <aura:attribute name="City" type="string" default="San Francisco" />
+    <aura:attribute name="State" type="String" default="California" />
+    <aura:attribute name="PostalCode" type="string" default="95128" />
+    {!v.Street}  {!v.city}  {!v.state}  {!v.PostalCode}
+</aura:component>

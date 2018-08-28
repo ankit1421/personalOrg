@@ -1,0 +1,6 @@
+<apex:page standardController="Account" extensions="ClassA">
+  <apex:form >
+     <apex:inputField value="{!acc.Name}"/>
+     <apex:commandButton value="{!print}"/>
+  </apex:form>
+</apex:page>

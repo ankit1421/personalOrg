@@ -1,0 +1,10 @@
+<aura:component Controller="DisplayCaseController">
+    <aura:attribute name="record" type="Case" />
+    <aura:attribute name="caseId" type="String" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <ui:outputText value="{!v.record.subject}" />
+    <ui:outputText value="{!v.record.Description}" />
+    <ui:outputText value="{!v.record.status}" />
+    
+</aura:component>

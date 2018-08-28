@@ -1,0 +1,10 @@
+<!--
+ - Created by Ankit on 8/31/17.
+ -->
+
+<aura:component description="domLocker">
+    <div id="myDiv" aura:id = "div1">
+        <p>see how LockerService restricts DOM access</p>
+    </div>
+    <lightning:button name="myButton" label="Peek in DOM" aura:id="button1" onclick="{!c.peekInDom}"/>
+</aura:component>

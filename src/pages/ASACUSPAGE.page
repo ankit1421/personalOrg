@@ -1,0 +1,233 @@
+<apex:page controller="ASACLASSPRE" tabStyle="TestTab__tab">
+<script>
+</script>
+<apex:form >
+
+<!-- Count is : {!counter} -->
+<apex:pageBlock title="Account Setup Automation" >
+<apex:pageBlockButtons >
+<apex:commandButton value="Submit"/>
+</apex:pageBlockButtons>
+
+<apex:pageBlockSection title="Order Information" columns="2" >
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Order Type"></apex:outputLabel>
+                    <apex:selectList value="{!orderType}" size="1" required="true">
+                                <apex:selectOptions value="{!OrderType1}"/>
+                            </apex:selectList>
+               
+                </apex:pageBlockSectionItem>
+
+                <apex:pageBlockSectionItem >
+                
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Origin Code"></apex:outputLabel>
+                    <apex:selectList value="{!origincode}" size="1">
+                                <apex:selectOptions value="{!origincode1}"/>
+                            </apex:selectList>
+                </apex:pageBlockSectionItem>
+
+                <apex:pageBlockSectionItem >
+                </apex:pageBlockSectionItem>
+                
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Batch Identifier"></apex:outputLabel>
+                    <apex:outputLabel value="{!batchIdentifier}"></apex:outputLabel>
+                </apex:pageBlockSectionItem>
+
+                <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Order Number"></apex:outputLabel>
+                        <apex:inputText value="{!orderNo}"></apex:inputText>
+                </apex:pageBlockSectionItem>
+
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Sales Person TMID"></apex:outputLabel>
+                    <apex:inputText value="{!salesTMID}"></apex:inputText>
+                </apex:pageBlockSectionItem>
+
+                <apex:pageBlockSectionItem >
+                    
+                </apex:pageBlockSectionItem>
+               
+               <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Hierarchy"></apex:outputLabel>
+                    <apex:selectList value="{!hierarchy}" size="1">
+                    <apex:selectOptions value="{!hier}"/>
+                    </apex:selectList>
+                    </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+
+<apex:pageBlockSection title="Business Profile" columns="2">
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Business Legal Name"></apex:outputLabel>
+                <apex:inputText value="{!BusiLegName}"></apex:inputText>
+             </apex:pageBlockSectionItem>
+            
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="DBA"></apex:outputLabel>
+                    <apex:inputText value="{!DBA}"></apex:inputText>
+                 </apex:pageBlockSectionItem>
+    
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Location"></apex:outputLabel>
+                <apex:inputText value="{!LocId}"></apex:inputText>
+            </apex:pageBlockSectionItem>
+
+            <apex:pageBlockSectionItem >
+                    
+            </apex:pageBlockSectionItem>
+             
+             <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="Street Address"></apex:outputLabel>
+                 <apex:inputText value="{!StrAdd}"></apex:inputText>        
+             </apex:pageBlockSectionItem>
+             
+             <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="Suite/Apt."></apex:outputLabel>
+                 <apex:inputText value="{!sutApt}"></apex:inputText>        
+             </apex:pageBlockSectionItem>
+             
+             <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="City"></apex:outputLabel>
+                 <apex:inputText value="{!city}"></apex:inputText>        
+             </apex:pageBlockSectionItem>
+             
+             <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="State"></apex:outputLabel>
+                    <apex:selectList value="{!state}" size="1">
+                    <apex:selectOptions value="{!stat}"/>
+                    </apex:selectList>
+             </apex:pageBlockSectionItem>
+              
+              <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="ZIP"></apex:outputLabel>
+                 <apex:inputText value="{!zip}"></apex:inputText>        
+             </apex:pageBlockSectionItem>
+             
+              <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="Zip+4"></apex:outputLabel>
+                 <apex:inputText value="{!zip4}"></apex:inputText>        
+             </apex:pageBlockSectionItem>
+             
+              <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="Business Telephone"></apex:outputLabel>
+                 <apex:inputText value="{!Busitel}"></apex:inputText>        
+             </apex:pageBlockSectionItem>
+             
+              <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="Ext"></apex:outputLabel>
+                 <apex:inputText value="{!Ext}"></apex:inputText>        
+             </apex:pageBlockSectionItem>
+             
+              <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="Contact Name"></apex:outputLabel>
+                 <apex:inputText value="{!conname}"></apex:inputText>        
+             </apex:pageBlockSectionItem>
+             
+              <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="Contact Email"></apex:outputLabel>
+                 <apex:inputText value="{!conemail}"></apex:inputText>        
+             </apex:pageBlockSectionItem>
+             
+              <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="Customer Service Phone"></apex:outputLabel>
+                 <apex:inputText value="{!cusserph}"></apex:inputText>        
+             </apex:pageBlockSectionItem>
+             
+             <apex:pageBlockSectionItem >
+                       
+             </apex:pageBlockSectionItem>
+             
+             <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="Stock Symbol"></apex:outputLabel>
+                 <apex:inputText value="{!stksym}"></apex:inputText>        
+             </apex:pageBlockSectionItem>
+             
+             <apex:pageBlockSectionItem >
+                       
+             </apex:pageBlockSectionItem>
+             
+             <apex:pageBlockSectionItem >
+             <apex:outputLabel value="Industry Code"></apex:outputLabel>
+             <apex:outputLabel value="{!Indcode}"></apex:outputLabel>
+             </apex:pageBlockSectionItem>
+             
+             <apex:pageBlockSectionItem >
+             <apex:outputLabel value="CPC Indicator"></apex:outputLabel>
+                     <apex:selectList value="{!CpcInd}" size="1">
+                     <apex:selectOptions value="{!cpind}"/>
+                     </apex:selectList>   
+             </apex:pageBlockSectionItem>
+             
+             <apex:pageBlockSectionItem >
+             <apex:outputLabel value="Web Address"></apex:outputLabel>
+             <apex:inputText value="{!webadd}"></apex:inputText>
+             </apex:pageBlockSectionItem>
+             
+             <apex:pageBlockSectionItem >
+             
+             </apex:pageBlockSectionItem>
+             
+             <apex:pageBlockSectionItem >
+             <apex:outputLabel value="Business Email"></apex:outputLabel>
+             <apex:inputText value="{!busiemail}"></apex:inputText>
+             </apex:pageBlockSectionItem>
+             
+             <apex:pageBlockSectionItem >
+             <apex:outputLabel value="Customer Service Email"></apex:outputLabel>
+             <apex:inputText value="{!cusEmailSer}"></apex:inputText>
+             </apex:pageBlockSectionItem>
+             
+             <apex:pageBlockSectionItem >
+             <apex:outputLabel value="Is this a Secured Site?"></apex:outputLabel>
+             <apex:inputCheckbox value="{!issersite}"/> 
+             </apex:pageBlockSectionItem>
+             
+             <apex:pageBlockSectionItem >
+             
+             </apex:pageBlockSectionItem>
+             
+             </apex:pageBlockSection>
+             
+          <apex:pageBlockSection title="Additional Address" columns="2">
+          
+          <apex:pageBlockSectionItem >
+          <apex:outputLabel value="Usage"> </apex:outputLabel>
+          
+          </apex:pageBlockSectionItem>
+          
+          <apex:pageBlockSectionItem >
+          
+          </apex:pageBlockSectionItem>
+          
+          <apex:pageBlockSectionItem >
+          <apex:outputLabel value="Payment"></apex:outputLabel>
+          <apex:inputCheckbox value="{!payment}" /> 
+          </apex:pageBlockSectionItem>
+          
+          <apex:pageBlockSectionItem >
+          <apex:outputLabel value="Correspondence"></apex:outputLabel>
+          <apex:inputcheckbox value="{!correspondence}"/>
+          </apex:pageBlockSectionItem>
+          
+          <apex:pageBlockSectionItem >
+          
+          </apex:pageBlockSectionItem>
+          
+          <apex:pageBlockSectionItem >
+          <apex:outputLabel value="Home Based"></apex:outputLabel>
+          <apex:inputcheckbox value="{!homebased}"/>
+          </apex:pageBlockSectionItem>
+          
+          
+          
+          
+          
+          </apex:pageBlockSection>
+       </apex:pageBlock>
+</apex:form>
+</apex:page>

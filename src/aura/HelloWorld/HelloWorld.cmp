@@ -1,0 +1,5 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="whom" type="string" default="Lightning"/>
+    <lightning:button variant="brand" label="Submit" onclick="{!c.handleClickAgain}"/>
+          Hello {!v.whom}
+</aura:component>

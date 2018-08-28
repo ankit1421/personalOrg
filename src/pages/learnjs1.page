@@ -1,0 +1,4 @@
+<apex:page showHeader="true" tabstyle="Account" readOnly="true">
+    <apex:ListViews type="Case" />
+    <apex:ListViews type="Position__c" />
+</apex:page>

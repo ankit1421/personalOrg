@@ -1,0 +1,48 @@
+<aura:component >
+
+    <!-- attribute Names -->
+    <aura:attribute name="sampleString" type="string" default="String"/>
+    <aura:attribute name="sampleNumber" type="Integer" default="10"/>
+    <aura:attribute name="sampleList" type="string[]" default="['amidst','cloud']"/>
+    <aura:attribute name="sampleVariable" type="string" default="same variable name in js controller"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <!-- Duplicate attribute Name. salesforce won't allow this. Error on save.
+    <aura:attribute name = "sampleString" type="string" default = "Duplicate Attribute"/> -->
+
+    <!-- sample div -->
+    <div aura:id = "sampleDiv">
+        <p>DIV Instance</p>
+        <!-- blank div -->
+    </div>
+
+
+    <!-- Two divs with same aura:id -->
+
+    <div aura:id = "sampleDivDup">
+        <!-- Blank Div -->
+        <p> First Duplicate DIV</p>
+    </div>
+
+    <div aura:id = "sampleDivDup">
+        <p> Second Duplicate DIV</p>
+        <!-- Blank Div -->
+    </div>
+
+
+
+    <!-- div with a button in it -->
+    <div aura:id = "sampleDivButton">
+        <!-- button with the aura:id = sampleButton -->
+        <lightning:button name="button1" label="Sample Button" variant="brand" aura:id="sampleButton"/>
+    </div>
+
+
+    <!-- div with a input element -->
+    <div aura:id = "sampleDivInput">
+        <!-- input with the aura:id = fname -->
+        <lightning:input label="name" name="firstName" aura:id="fname"/>
+    </div>
+
+</aura:component>

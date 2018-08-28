@@ -1,0 +1,10 @@
+<!--
+ - Created by Ankit on 2/21/18.
+ -->
+
+<aura:component description="methodChildComponent">
+    <aura:method name="amethod" action="{!c.executemethod}">
+        <aura:attribute name="name" type="string"/>
+        <aura:attribute name="surname" type="string"/>
+    </aura:method>
+</aura:component>

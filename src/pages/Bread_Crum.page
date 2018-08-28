@@ -1,0 +1,7 @@
+<apex:page controller="Bread_Crum">
+  <apex:panelGrid >
+        <apex:repeat value="{!Bread_Count}">
+            <apex:image value="{!$Resource.Bread_Crum}" height="200" width="200"/>
+        </apex:repeat>
+  </apex:panelGrid>
+</apex:page>

@@ -1,0 +1,20 @@
+<apex:page controller="ArunClassRecordType">
+  <apex:form >
+      <apex:pageblock >
+           <apex:pageBlockSection columns="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="List of Objects"/>
+                  <apex:selectList value="{!selectedValue}" size="1" onchange="fetchValue();">
+                      <apex:selectOptions value="{!AvailableValues}"/>
+                  </apex:selectList>
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection> 
+      </apex:pageblock>
+      <apex:actionFunction name="fetchValue" action="{!DisplayRecordType}" rerender="theid" />
+      <apex:outputpanel id="theid">
+          <apex:pageblock >
+             Create a pageblock Table here .....
+             </apex:pageblock>
+      </apex:outputPanel>      
+  </apex:form>
+</apex:page>

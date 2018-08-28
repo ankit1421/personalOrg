@@ -1,0 +1,10 @@
+<apex:page controller="FetchSlave">
+<apex:form >
+<apex:pageBlock >
+Please click the button below to check the slaves of master
+<apex:commandButton action="{!getSlave}" value="Show Slaves"/>
+<apex:inputText value="{!text}"/>
+<apex:outputLabel value="{!text1}"></apex:outputLabel>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

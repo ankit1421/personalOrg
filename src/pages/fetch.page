@@ -1,0 +1,19 @@
+<apex:page controller="dataTableCon">
+    <apex:form >
+        <apex:pageBlock >
+                    <apex:pageBlockTable value="{!accounts}" var="c1" id="table">
+                           <apex:column value="{!c1.id}" />
+                           <apex:column value="{!c1.Name}" />
+                
+                    </apex:pageBlockTable>
+            </apex:pageBlock>              
+      <apex:pageBlock >                    
+       <apex:pageBlockTable value="{!contacts}" var="co" id="contact">
+                           <apex:column value="{!co.id}" />
+                           <apex:column value="{!co.Name}" />
+                
+                    </apex:pageBlockTable>
+                                       
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,32 @@
+<!--
+ - Created by Ankit on 11/10/17.
+ -->
+
+<aura:component implements="flexipage:availableForRecordHome,force:lightningQuickActionWithoutHeader,force:hasRecordId" description="ldsDisplayRecord">
+
+    <aura:attribute name="simpleRecord" type="Object"/>
+    <aura:attribute name="recordError" type="Object"/>
+    <force:recordData aura:id="record" layoutType="FULL" recordId="{!v.recordId}" mode="VIEW"></force:recordData>
+      <p> We do not value here </p>
+     <div class="Record Details">
+         <p>
+          Here are the new values {!v.recordId}
+          here is the sample record {!v.simpleRecord}   
+         </p>
+         <lightning:card iconName="standard:account" title="{!v.simpleRecord.Name}">
+              <div class="slds-p-horizontal--small">
+                  <p class="slds-text-heading--small">
+                      <lightning:formattedText title="Billing City" value="{!v.simpleRecord.billingCity}"></lightning:formattedText>
+                  </p>
+                  <p class="slds-text-heading--small">
+                      <lightning:formattedText title="Billing State" value="{!v.simpleRecord.billingState}"></lightning:formattedText>
+                  </p>
+              </div>
+         </lightning:card>
+     </div>
+     <aura:if isTrue="{!not(empty(v.recordError))}">
+         <div class="recordError">
+             {!v.recordError}
+         </div>
+     </aura:if>
+</aura:component>

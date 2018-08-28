@@ -1,0 +1,4 @@
+<apex:page controller="Delete_picklist_values">
+   Mass deletion picklist values
+    
+</apex:page>

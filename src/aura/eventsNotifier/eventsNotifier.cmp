@@ -1,0 +1,15 @@
+<!--
+ - Created by Ankit on 9/4/17.
+ -->
+
+<aura:component description="eventsNotifier">
+    <aura:attribute name="parentName" type="string"/> 
+    <aura:registerEvent name="appEvent" type="c:appEvent"/>
+    <aura:registerEvent name="componentEventFired" type="c:compEvent"/>
+
+    <div>
+        <h3> This is {!v.parentName} eventNotifier Component instance</h3>
+        <p><ui:button label="click here to fire component Event"  press="{!c.fireComponentEvent}" /> </p>
+        <p><ui:button label="click here to fire application Event"  press="{!c.fireApplicationEvent}" /> </p>
+    </div>
+</aura:component>

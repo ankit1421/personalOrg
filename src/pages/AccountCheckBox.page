@@ -1,0 +1,52 @@
+<apex:page controller="AccountsControllerList">
+   
+   <apex:form >
+        <apex:pageMessages />
+        <div class="container">
+  <apex:pageBlock >
+  <apex:pageBlockSection columns="1">
+                <apex:outputPanel >
+                    <apex:pageBlockSection columns="1">
+                        <apex:pageBlockTable value="{!Accounts}" var="b">
+                            <apex:column headerValue="Text">
+                                <apex:inputText id="txtId" value="{!b.sampleTextField__c}"/>
+                            </apex:column> 
+                            <apex:column headerValue="Checkbox">
+                                <apex:inputcheckbox id="chkbx" value="{!b.SampleCheckBox__c}"/> 
+                            </apex:column> 
+                        </apex:pageBlockTable>
+                    </apex:pageBlockSection>
+                    <center>
+                        <apex:outputPanel >
+                           <!-- <apex:commandLink action="{!save}" value="Save"/> -->
+                        </apex:outputPanel>
+                    </center>
+                </apex:outputPanel>
+            </apex:pageBlockSection>
+
+        </apex:pageBlock>
+
+        </div>            
+
+    </apex:form>
+    <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"/>
+
+    <script type="text/javascript">
+        var $ = jQuery.noConflict();
+        $(document).ready(function() {
+            $('[id$=chkbx]').click(function() {
+                if($(this).is(':checked')) {
+                    alert('checked');
+                    console.log(JSON.stringify($(this).closest("tr").find("#txtId")));
+                    console.log($(this).closest("tr").find("#txtId").val());
+                   // j$('[id$=txtId]').removeAttr('disabled');
+                    $(this).closest("tr").find("#txtId").attr('disabled', 'disabled'); 
+                      
+                }
+                else {
+                  $(this).closest("tr").find("#txtId").removeAttr('disabled');
+                }
+            });
+        });
+    </script> 
+</apex:page>

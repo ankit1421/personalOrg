@@ -1,0 +1,27 @@
+<aura:component controller="tableComponent" implements="force:appHostable,flexipage:availableForAllPageTypes" access="global">
+	
+	<ltng:require styles="{!$Resource.tables + '/jquery.dataTables.min.css'}" scripts="{!join(',', $Resource.tables + '/jquery-3.2.1.min.js', $Resource.tables + '/jquery.dataTables.min.js')}"  afterScriptsLoaded="{!c.scriptsLoaded}"></ltng:require>
+
+	<aura:attribute name="accounts" type="account[]"></aura:attribute>
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"></aura:handler>
+	<table id="table">
+        <thead>
+            <tr>
+                <th> Account Name </th>
+                <th> Billing Address </th>
+            </tr>
+        </thead>
+        <tbody>
+            <aura:iteration items="{!v.accounts}" var="account" indexVar="num" >
+                <tr>
+                    <td>
+                        {!account.Name}
+                    </td>
+                    <td>
+                        {!account.BillingCountry}
+                    </td>
+                </tr>
+            </aura:iteration>
+        </tbody>     
+     </table>     
+</aura:component>

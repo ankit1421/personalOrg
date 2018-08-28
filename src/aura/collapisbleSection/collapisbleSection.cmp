@@ -1,0 +1,59 @@
+<!--
+ - Created by Ankit on 3/23/18.
+ -->
+
+<aura:component description="collapisbleSection">
+        <aura:attribute name="acc" type="Account"/>
+        <div class="slds-page-header" style="cursor: pointer;" onclick="{!c.sectionOne}">
+            <section class="slds-clearfix">
+                <div class="slds-float--left ">
+                    <lightning:icon class="slds-show" aura:id="articleOne" iconName="utility:add" size="x-small" alternativeText="Indicates add"/>
+                    <lightning:icon class="slds-hide" aura:id="articleOne" iconName="utility:dash" size="x-small" alternativeText="Indicates dash"/>
+                </div>
+                <div class="slds-m-left--large">{!v.acc.Name}</div>
+            </section>
+        </div>
+        <div class="slds-hide slds-p-around--medium" aura:id="articleOne">
+            Table is not getting printed for some reason
+            <table class="slds-table slds-table--bordered slds-table--cell-buffer slds-table--striped slds-max-medium-table--stacked-horizontal"
+                   role="grid">
+                <thead>
+                <tr>
+                    <th class="slds-is-sortable slds-cell-wrap" scope="col">
+                        Name
+                    </th>
+                    <th class="slds-is-sortable slds-cell-wrap" scope="col">
+                        Industry
+                    </th>
+                    <th class="slds-is-sortable slds-cell-wrap" scope="col">
+                        Phone
+                    </th>
+                    <th class="slds-is-sortable slds-cell-wrap" scope="col">
+                        Number of Employee
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+               
+
+                    <tr class="slds-hint-parent">
+                        <td role="gridcell" class="slds-cell-wrap" data-label="Name">
+                                {!v.acc.Name}
+                        </td>
+                        <td role="gridcell" class="slds-cell-wrap" data-label="accName">
+                                {!v.acc.Industry}
+                        </td>
+                        <td role="gridcell" class="slds-cell-wrap" data-label="prName">
+                                {!v.acc.Phone}
+                        </td>
+                        <td role="gridcell" class="slds-cell-wrap" data-label="manuName">
+                                {!v.acc.NumberOfEmployees}
+                        </td>
+
+                    </tr>
+
+               
+                </tbody>
+            </table>
+        </div>
+</aura:component>

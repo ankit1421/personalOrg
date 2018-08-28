@@ -1,0 +1,6 @@
+<!--
+ - Created by Ankit on 3/21/18.
+ -->
+
+<apex:component id="GetFindComp">
+</apex:component>

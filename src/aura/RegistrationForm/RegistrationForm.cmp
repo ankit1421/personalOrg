@@ -1,0 +1,18 @@
+<aura:component >       
+    <aura:attribute name="fName" type="String" default="Ankit"/>
+    <aura:attribute name="lName" type="String" default="Khandelwal"/>
+    <aura:attribute name="pNumber" type="String" default="12356789"/>
+    <aura:attribute name="sal" type="String" default="Mr."/>
+ 
+    <ui:inputText aura:id="fName" label="First Name" value="{!v.fName}" />  
+    <ui:inputText aura:id="lName" label="Last Name" value="{!v.lName}"  /> 
+    <ui:inputPhone aura:id="phnNum" label="Phone Number" value="{!v.pNumber}"  />  
+    
+    <ui:inputSelect aura:id="salutation"  multiple="false" label="Salutation" value="{!v.sal}" >
+        <ui:inputSelectOption text="Dr." label="Dr." />
+        <ui:inputSelectOption text="Mr." label="Mr."/>
+        <ui:inputSelectOption text="Mrs." label="Mrs."/>
+        <ui:inputSelectOption text="Ms." label="Ms."/>
+	</ui:inputSelect> 
+    <ui:button label="Submit" aura:id="btnSubmit"/>
+</aura:component>

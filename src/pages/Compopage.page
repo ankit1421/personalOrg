@@ -1,0 +1,4 @@
+<apex:page >
+  <c:TestComponent myname="{!$User.FirstName}" msg="welcome">
+  </c:TestComponent>
+</apex:page>

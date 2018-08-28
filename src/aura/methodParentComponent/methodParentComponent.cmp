@@ -1,0 +1,10 @@
+<!--
+ - Created by Ankit on 2/21/18.
+ -->
+
+<aura:component description="methodParentComponent">
+        <aura:attribute name="pname" type="string"/>
+        <aura:attribute name="psurname" type="string"/>
+        <c:methodChildComponent aura:id="childComp"/>
+        <lightning:button variant="brand" label="clickMe" name="clickMe" onclick="{!c.callMethod}"/>
+</aura:component>

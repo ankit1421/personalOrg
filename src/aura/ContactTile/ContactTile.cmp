@@ -1,0 +1,14 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+	<aura:attribute name="Contact" type="Contact"></aura:attribute>
+	<div class = "titleBox">
+		 <img class ="titleImg" src  = "{!v.Contact.Profile_Pic_URL__c}"> </img>
+		 <div class = "tileBody">
+		 	<div class = "tileTitle">{!v.Contact.Name} </div>
+		 	<div class = "tileDescription">
+		 		{!v.Contact.MailingStreet}
+		 		{!v.Contact.MailingCity} {!v.Contact.MailingState}
+		 		{!v.Contact.MailingCountry} {!v.Contact.MailingPostalCode}
+		 	</div>
+		 </div>
+	</div>	
+</aura:component>

@@ -1,0 +1,9 @@
+<apex:component >
+<apex:attribute name="myname" type="string" description="my name to display"/>
+ <apex:attribute name="msg" type="string" description="message"/>
+  <fieldset>
+    <h1> Hii  {!myname}...........................!</h1>
+    
+    </fieldset>
+    
+</apex:component>

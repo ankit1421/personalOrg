@@ -1,0 +1,7 @@
+<!--
+ - Created by Ankit on 9/4/17.
+ -->
+
+<aura:event type="APPLICATION" description="appEvent">
+    <aura:attribute name="content" type="string"/>
+</aura:event>

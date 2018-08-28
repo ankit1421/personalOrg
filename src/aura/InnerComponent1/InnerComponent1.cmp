@@ -1,0 +1,28 @@
+<aura:component >
+    <aura:attribute name="header" type="string"></aura:attribute>
+    <aura:attribute name="numbers" type="Integer[]"></aura:attribute>
+    <aura:attribute name="numbers2" type="List"></aura:attribute>
+    <aura:attribute name="ratingsByProduct" type="Map"></aura:attribute>
+     <aura:attribute name="myFavouriteAccount" type="Account"/>
+    <aura:attribute name="myFavouriteInstance" type="SampleReturnClass"></aura:attribute>
+    <aura:attribute name="jsObject" type="object"/>
+
+     <div>
+           <h1>{!v.header}</h1>
+           <p> the Selected numebr are
+            <aura:iteration var="num" items="{!v.numbers}">
+                {!num}
+             </aura:iteration>
+           </p>
+          <p>
+             <aura:iteration var="num2" items="{!v.numbers2}">
+                {!num2}
+             </aura:iteration>
+          </p>
+          <div Id = "ratingsByProductContainer"/>
+          <p> MY favourite accout is {!v.myFavouriteAccount.Name}</p>
+           <p> MY favourite Instance is {!v.myFavouriteInstance.sName}</p>
+          <p> type:{!v.jsObject.type} - model:{!v.jsObject.Model} - color{!v.jsObject.color}</p>
+          
+     </div>
+</aura:component>
